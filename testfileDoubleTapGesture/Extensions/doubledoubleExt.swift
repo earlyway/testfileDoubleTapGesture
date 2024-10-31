@@ -13,9 +13,9 @@ import RealityKit
 public extension View {    //import swiftUI 를 해주어서 cannot type 'view' error 를 없앰.
     func doubleTapGesture(action: @escaping () -> Void) -> some View {
         self.gesture(
-            TapGesture(count: 3)
+            TapGesture(count: 2)
                 .onEnded { _ in
-                    action()
+                    print("double double")
                 }
         )
     }

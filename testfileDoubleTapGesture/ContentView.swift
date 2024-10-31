@@ -34,9 +34,9 @@ struct ContentView: View {
                 .cornerRadius(8)
                 .glassBackgroundEffect()
                 
-                .doubleTapGesture{
-                    print("double tap gesture detected")
-                }
+//                .doubleTapGesture{
+//                    print("double tap gesture detected")
+//                }
                 
                 .alert(isPresented: $showDeletePopup) {
                     Alert(
@@ -55,8 +55,15 @@ struct ContentView: View {
             .glassBackgroundEffect()
             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             .fontWeight(.heavy)
+        VStack {
+            Text("Show Popup")
+                .doubleTapGesture {
+                print("dodo")
+            }
+                .font(.title)
         }
     }
+}
 
 #Preview(windowStyle: .automatic) {
     ContentView()
